@@ -1,8 +1,6 @@
-import selfbot from "./index.js"
-import { readFileSync, writeFileSync } from "fs"
+const { selfbot } = require("./dist/index.cjs")
+const { readFileSync, writeFileSync } = require("fs")
 
-let opts = JSON.parse(readFileSync("./env.json"))
-let cookies = JSON.parse(readFileSync("./cookies.json"))
 let proxy = "direct://"
 
 let used = 0;
